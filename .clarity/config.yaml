@@ -1,19 +1,31 @@
-# Configuration for Clarity Reminder
-version: 1.0
+# HOW TO EDIT THIS FILE
+# (1) version: Specifies the version of the configuration file format.
+# (2) reminders: Contains a list of reminder rules. Each reminder includes:
+#     - (2.1) name: Descriptive name for the reminder.
+#     - (2.2) on_update: List of file patterns that trigger this reminder. Patterns can be:
+#         - `src/*`: Matches all files in the `src` directory.
+#         - `lib/*`: Matches all files in the `lib` directory.
+#         - `src/**`: Matches all files and subdirectories in the `src` directory.
+#         - `src/**/*`: Matches all files at any level of nesting in the `src` directory.
+#         - `src/**/*.js`: Matches all JavaScript files at any level of nesting in the `src` directory.
+#         - `src/specificfile.js`: Matches a specific file named `specificfile.js` in the `src` directory.
+#      - (2.3) remind_me: List of target files to check for updates. (Similar patterns with when_updated)
+#      - (2.4) message: Message included in the comment when the reminder is triggered.version: 1.0
 
 reminders:
   - name: Update README & RELEASE_NOTES
-    when_updated:
-      - src/*
+    on_update:
+      - src/**/*
       - lib/*
-    remind_me_of:
+    remind_me:
       - README.md
       - RELEASE_NOTES.md
     message: "Don't forget to update the README & RELEASE NOTES file with the latest changes."
 
   - name: Documentation Update
-    when_update:
+    on_update:
       - src/api/*
-    remind_me_of:
+    remind_me:
       - docs/*
     message: "Documentation needs to be updated with the latest changes."
+

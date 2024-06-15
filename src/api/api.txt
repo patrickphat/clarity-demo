@@ -1,4 +1,5 @@
 Route createUser {
   Example.txt
   controllerExample()
+  updateControllerTest()
 }
