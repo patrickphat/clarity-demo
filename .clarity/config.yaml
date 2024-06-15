@@ -1,0 +1,19 @@
+# Configuration for GitHub App reminders
+version: 1.0
+
+reminders:
+  - name: Update README & RELEASE_NOTES
+    trigger_files:
+      - src/*
+      - lib/*
+    target_files:
+      - README.md
+      - RELEASE_NOTES.md
+    message: "Don't forget to update the README & RELEASE NOTES file with the latest changes."
+
+  - name: Documentation Update
+    trigger_files:
+      - src/api/*
+    target_files:
+      - docs/*
+    message: "Documentation needs to be updated with the latest changes."
