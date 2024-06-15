@@ -4,7 +4,7 @@ version: 1.0
 reminders:
   - name: Update README & RELEASE_NOTES
     trigger_files:
-      - src/*
+      - src/**/*
       - lib/*
     target_files:
       - README.md
