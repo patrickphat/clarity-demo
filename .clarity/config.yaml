@@ -1,19 +1,19 @@
-# Configuration for GitHub App reminders
+# Configuration for Clarity Reminder
 version: 1.0
 
 reminders:
   - name: Update README & RELEASE_NOTES
-    trigger_files:
+    when_updated:
       - src/*
       - lib/*
-    target_files:
+    remind_me_of:
       - README.md
       - RELEASE_NOTES.md
     message: "Don't forget to update the README & RELEASE NOTES file with the latest changes."
 
   - name: Documentation Update
-    trigger_files:
+    when_update:
       - src/api/*
-    target_files:
+    remind_me_of:
       - docs/*
     message: "Documentation needs to be updated with the latest changes."
