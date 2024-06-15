@@ -6,7 +6,7 @@ reminders:
     on_update:
       - src/**/*
       - lib/*
-    remind_me_of:
+    remind_me:
       - README.md
       - RELEASE_NOTES.md
     message: "Don't forget to update the README & RELEASE NOTES file with the latest changes."
@@ -14,6 +14,6 @@ reminders:
   - name: Documentation Update
     on_update:
       - src/api/*
-    remind_me_of:
+    remind_me:
       - docs/*
     message: "Documentation needs to be updated with the latest changes."
