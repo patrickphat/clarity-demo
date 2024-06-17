@@ -3,4 +3,5 @@ Route createUser {
   controllerExample()
   updateControllerTest()
   updateNewController()
+  userController()
 }
